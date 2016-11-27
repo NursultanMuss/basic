@@ -7,9 +7,13 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1><?= Yii::t('app', 'Congratulations!')?></h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead"><?= Yii::$app->formatter->asDate('2016-11-27', 'long')?></p>
+        
+        <p class="lead"><?= \Yii::t('app', 'There {n, plural, =0{are no cats} =1{is one cat} other{are # cats}}!',['n'=>0])?></p>
+        <p class="lead"><?= \Yii::t('app', 'There {n, plural, =0{are no cats} =1{is one cat} other{are # cats}}!',['n'=>42])?></p>
+        <p class="lead"><?= \Yii::t('app', 'There {n, plural, =0{are no cats} =1{is one cat} other{are # cats}}!',['n'=>5])?></p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
@@ -18,7 +22,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2><?= Yii::t('app', 'Heading')?></h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
