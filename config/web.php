@@ -62,6 +62,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
 //            'enableStrictParsing' => 'true',
+            'showScriptName' => 'false',
             'rules' => [
             'books' => 'books/index', 
             ],
